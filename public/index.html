@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Place Autocomplete and Directions</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<div class="data-container">
+  <div class="personal-data-container">
+    <input class="controls pac-target-input" id="NUME" type="text" placeholder="Introduceti numele" />
+    <input class="controls pac-target-input" id="EMAIL" type="text" placeholder="Introduceti adresa de email" />
+  </div>
+
+  <div class="trip-data-container">
+    <input class="controls pac-target-input" type="text" id="orig_latitude" name="orig_latitude"
+      placeholder="Latitudine punct de plecare" disabled />
+    <input class="controls pac-target-input" type="text" id="orig_longitude" name="orig_longitude"
+      placeholder="Longitudine punct de plecare" disabled />
+    <input class="controls pac-target-input" type="text" id="dest_latitude" name="dest_latitude"
+      placeholder="Latitudine destinatie" disabled />
+    <input class="controls pac-target-input" type="text" id="dest_longitude" name="dest_longitude"
+      placeholder="Longitudine destinatie" disabled />
+  </div>
+</div>
+
+<p id="distance"></p>
+<p id="estimation"></p>
+
+<p id="pret_1"></p>
+<p id="pret_2"></p>
+<p id="pret_3"></p>
+<p id="comanda"></p>
+
+<div id="mode-container">
+  <div class="left-section">
+    <input id="origin-input" class="controls" type="text" placeholder="De la">
+    <input id="destination-input" class="controls" type="text" placeholder="Pana la">
+  </div>
+  <div class="right-section">
+    <input type="radio" name="type" id="changemode-driving">
+    <label for="changemode-driving">Driving</label>
+    <button type="submit" class="button controls pac-target-input" onclick="plasareComanda()">Masina 1</button>
+    <button type="submit" class="button controls pac-target-input" onclick="plasareComanda()">Masina 2</button>
+    <button type="submit" class="button controls pac-target-input" onclick="plasareComanda()">Masina 3</button>
+  </div>
+</div>
+
+<div id="map"></div>
+
+
+<script src="script.js">
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkiGv2h1IOQCgr2R-S48Gb8jjbxg55v8w
+    &libraries=places,geometry&callback=initMap" async defer></script>
+
+</body>
